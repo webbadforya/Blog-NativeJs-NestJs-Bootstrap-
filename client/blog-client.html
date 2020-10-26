@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z"
+      crossorigin="anonymous"
+    />
+    <link href="./css/main.css" rel="stylesheet" />
+    <title>Blog</title>
+    <script src="js/registration.js"></script>
+    <script src="js/log-in.js"></script>
+    <script src="js/post.js"></script>
+  </head>
+  <body>
+    <!-- Header -->
+    <header>
+      <div class="container">
+        <div class="row">
+          <!-- logo -->
+          <div class="col-8">
+            <strong class="display-1 logo">BLOG</strong>
+          </div>
+          <!-- /logo -->
+          <!-- registeration menu  -->
+          <div class="col-4">
+            <div class="log-menu" id="log-menu">
+              <p class="login-name" id="UserName"></p>
+              <br />
+              <a href="#" class="badge badge-dark" id="log-out">log out</a>
+            </div>
+            <form class="form-signin mt-3" id="mainForm">
+              <label for="inputName" class="sr-only">Name</label>
+              <input
+                type="text"
+                id="inputName"
+                name="name"
+                class="form-control mb-2"
+                placeholder="Name"
+                required
+                autofocus
+              />
+              <label for="inputEmail" class="sr-only">Email address</label>
+              <input
+                type="email"
+                id="inputEmail"
+                name="email"
+                class="form-control mb-2"
+                placeholder="Email address"
+                required
+                autofocus
+              />
+              <label for="inputPassword" class="sr-only">Password</label>
+              <input
+                type="password"
+                id="inputPassword"
+                name="password"
+                class="form-control mb-2"
+                placeholder="Password"
+                required
+              />
+              <button
+                id="logIn"
+                class="btn btn-lg btn-primary btn-block"
+                type="submit"
+              >
+                Log in
+              </button>
+              <button class="btn btn-lg btn-primary btn-block" type="submit">
+                Sign up
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+      <!-- /registeration menu  -->
+    </header>
+    <!-- /Header -->
+    <!-- main -->
+    <main>
+      <!-- blog wall -->
+      <div class="container blog-wall col-6 mx-auto mt-5">
+        <h1 class="text-dark text-center mb-10">Blog wall</h1>
+        <div class="row card-row flex-column" id="post">
+            
+          </div>
+        </div>
+    
+      <!-- /blog wall -->
+      <!-- create post button -->
+      <button
+        type="button"
+        class="btn btn-primary float-button"
+        data-toggle="modal"
+        data-target="#exampleModal"
+      >
+        <span></span>
+        <span></span>
+      </button>
+      <!-- /create post button -->
+      <!-- modal -->
+      <div
+        class="modal fade"
+        id="exampleModal"
+        tabindex="-1"
+        aria-labelledby="exampleModalLabel"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">New post</h5>
+              <button
+                type="button"
+                class="close"
+                data-dismiss="modal"
+                aria-label="Close"
+              >
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <form id="postForm">
+                <label for="title-name" class="col-form-label">Title:</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="title-name"
+                  name="title"
+                  required
+                />
+                <label for="message-text" class="col-form-label" id="message"
+                  >Message:</label
+                >
+                <textarea
+                  class="form-control"
+                  id="message-text"
+                  name="message"
+                  required
+                ></textarea>
+              </form>
+            </div>
+            <div class="modal-footer">
+              <button
+                type="button"
+                class="btn btn-secondary"
+                data-dismiss="modal"
+              >
+                Close
+              </button>
+              <button type="button" id="sendPostButton" class="btn btn-primary">
+                Send message
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- modal -->
+    </main>
+    <!-- /main -->
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx"
+      crossorigin="anonymous"
+    ></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>

@@ -1,0 +1,49 @@
+.login-name{
+   font-size: 24px;
+}
+.log-menu{
+   display: none;
+}
+.post-form{
+   z-index: 7;
+   height: 100%;
+   width: 100%;
+   display: block;
+   background: red;
+   opacity: 0.5;
+   position: absolute;
+   top: 0;
+}
+.float-button{
+   width: 50px;
+   height: 50px;
+   border-radius: 50%;
+   position: fixed;
+   bottom: 50px;
+   right: 50px;
+}
+.float-button span:first-child{
+   width: 6px;
+   height: 40px;
+   display: block;
+   background: #fff;
+   position: absolute;
+   top: 4px;
+   left: calc(50% - 3px)
+}
+.float-button span:last-child{
+   width: 40px;
+   height: 6px;
+   display: block;
+   background: #fff;
+   position: absolute;
+   top: calc(50% - 3px);
+   left: 4px
+}
+h5{
+margin: 50px 0;
+}
+.card-body{
+   margin: 5px 0;
+   border: 3px solid #007bff;
+}
